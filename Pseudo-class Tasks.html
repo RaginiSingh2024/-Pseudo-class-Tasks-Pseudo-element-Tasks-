@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pseudo-Class and Pseudo-Element Tasks</title>
+  <style>
+    /* Task 1: Hover Effect */
+    .hover-btn {
+      padding: 10px 20px;
+      background-color: lightgray;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .hover-btn:hover {
+      background-color: lightgreen;
+    }
+
+    /* Task 2: Focus State Styling */
+    input:focus {
+      border: 2px solid royalblue;
+      outline: none;
+    }
+
+    /* Task 3: First-child Styling */
+    li:first-child {
+      color: red;
+    }
+
+    /* Task 4: Add Decorative Content */
+    h2::before {
+      content: "🔹 ";
+    }
+
+    /* Task 5: First-letter Styling */
+    p::first-letter {
+      font-size: 200%;
+      color: darkorange;
+    }
+
+    /* Task 6: Custom List Markers */
+    li::marker {
+      content: "➤ ";
+      color: purple;
+    }
+
+    /* Task 7: Animated Button with Shine Effect */
+    .shine-btn {
+      position: relative;
+      padding: 12px 30px;
+      background: #3498db;
+      color: white;
+      border: none;
+      overflow: hidden;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .shine-btn::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: skewX(-20deg);
+    }
+
+    .shine-btn:hover::after {
+      animation: slide-shine 0.75s linear forwards;
+    }
+
+    @keyframes slide-shine {
+      to { left: 125%; }
+    }
+
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    ul {
+      list-style: disc;
+      margin-left: 20px;
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <section>
+    <h2>Task 1: Hover Effect</h2>
+    <button class="hover-btn">Hover Me</button>
+  </section>
+
+  <section>
+    <h2>Task 2: Focus State Styling</h2>
+    <input type="text" placeholder="Focus me">
+  </section>
+
+  <section>
+    <h2>Task 3: First-child Styling</h2>
+    <ul>
+      <li>First item</li>
+      <li>Second item</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Task 4: Add Decorative Content</h2>
+    <h2>Introduction</h2>
+    <h2>Features</h2>
+  </section>
+
+  <section>
+    <h2>Task 5: First-letter Styling</h2>
+    <p>Learning CSS is fun and powerful.</p>
+    <p>Practice makes perfect!</p>
+  </section>
+
+  <section>
+    <h2>Task 6: Custom List Markers</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Task 7: Animated Button with Shine Effect</h2>
+    <button class="shine-btn">Click Me</button>
+  </section>
+
+</body>
+</html>

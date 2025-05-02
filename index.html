@@ -1,1 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Mood Journal</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .entry {
+      width: 90%;
+      max-width: 600px;
+      background-color: #fff3cd;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 15px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      position: relative;
+    }
+
+    .entry:nth-child(odd) {
+      background-color: #d1ecf1; /* light blue */
+    }
+
+    .entry:nth-child(even) {
+      background-color: #fff3cd; /* light yellow */
+    }
+
+    .entry:hover {
+      transform: scale(1.02);
+    }
+
+    .entry h2 {
+      margin-top: 0;
+      padding-left: 30px;
+      position: relative;
+    }
+
+    .happy::before {
+      content: "😀";
+      position: absolute;
+      left: 10px;
+    }
+
+    .meh::before {
+      content: "😐";
+      position: absolute;
+      left: 10px;
+    }
+
+    .sad::before {
+      content: "😢";
+      position: absolute;
+      left: 10px;
+    }
+
+    .happy:hover::before {
+      content: "😄";
+    }
+
+    .meh:hover::before {
+      content: "🙂";
+    }
+
+    .sad:hover::before {
+      content: "😭";
+    }
+
+    .entry p::first-letter {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .like-button {
+      margin-top: 15px;
+      font-size: 1.2em;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .like-button:active {
+      content: "💖";
+      transform: scale(1.3);
+      color: hotpink;
+    }
+
+    .entry::after {
+      content: "✨✨✨";
+      display: block;
+      text-align: right;
+      font-size: 0.9em;
+      margin-top: 10px;
+      color: #aaa;
+    }
+
+    @media (max-width: 600px) {
+      .entry {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📝 My Mood Journal</h1>
+
+  <div class="entry happy">
+    <h2>Feeling Great!</h2>
+    <p>Today was awesome. I finished my homework and played outside!</p>
+    <button class="like-button">❤️ Like</button>
+  </div>
+
+  <div class="entry meh">
+    <h2>Just Another Day</h2>
+    <p>Not much happened today. It was kind of average, but peaceful.</p>
+    <button class="like-button">❤️ Like</button>
+  </div>
+
+  <div class="entry sad">
+    <h2>Feeling Down</h2>
+    <p>I felt a bit lonely today. Hoping tomorrow will be better.</p>
+    <button class="like-button">❤️ Like</button>
+  </div>
+
+</body>
+</html>
 
